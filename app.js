@@ -7,11 +7,10 @@ var operador1 = () => parseInt(document.getElementById("first-op").value);
 var operador2 = () => parseInt(document.getElementById("second-op").value);
 
 function blank (){
-    if (!operador1()|| !operador2()){
+    if (isNaN(operador1()) || isNaN(operador2())) {
         document.getElementById("resultado").innerText = "Debes introducir ambos operandos"
     }
 }
-
 
 function suma() {
     resultsum = operador1() + operador2();
